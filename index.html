@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <link rel="icon" href="data:,">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finger Melody</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="videoCanvas"></canvas>
+    <canvas id="drawCanvas"></canvas>
+
+    <div id="songTitle"></div>
+
+    <div id="controls">
+        <button id="playBtn">▶ 播放</button>
+        <button id="stopBtn">⏹ 停止</button>
+        <button id="showListBtn">📂 MIDI 列表</button>
+        <button id="showInstrumentBtn">🎹 樂器</button>
+        
+        <select id="playerCountSelect">
+            <option value="1">1 人演奏</option>
+            <option value="2" selected>2 人合奏</option>
+            <option value="3">3 人合奏</option>
+            <option value="4">4 人狂歡</option>
+        </select>
+    </div>
+
+    <div id="midiListContainer">
+        <div class="list-header">
+            <h3>🎵 MIDI 檔案庫</h3>
+            <span id="closeList">&times;</span>
+        </div>
+        <div id="searchBox">
+            <input type="text" id="midiSearchInput" placeholder="搜尋標題或作曲者...">
+        </div>
+        <div id="midiList">
+            <p style="text-align:center; padding:20px;">準備中...</p>
+        </div>
+    </div>
+
+    <div id="instrumentListContainer">
+        <div class="list-header">
+            <h3>🎵 樂器清單</h3>
+            <span id="closeInstrument">&times;</span>
+        </div>
+        <div id="categoryList"></div>
+        <div id="instrumentList"></div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>
